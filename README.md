@@ -11,6 +11,8 @@ Please use this script only for educational purposes and not to download episode
 - unidecode (pip install unidecode)
 - youtube-dl (pip install youtube-dl)
 
+The script has successfully been tested on Windows 10 and MacOs Sierra. It should also work on Linux.
+
 ## Usage
 For the moment check the main() function and call the methods provided. A CLI Interface is coming soon.
 The script downloads everything in the folder from which it is called, consider this when calling the script!
