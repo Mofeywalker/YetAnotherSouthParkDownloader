@@ -27,7 +27,8 @@ ydl_opts_en = {
                 {
                         'key': 'FFmpegEmbedSubtitle'
                 }
-	]
+	],
+        'nocheckcertificate': True
 }
 
 ydl_opts_de = {
@@ -42,7 +43,8 @@ ydl_opts_de = {
                 {
                         'key': "FFmpegExtractAudio"
                 }
-        ]
+        ],
+        'nocheckcertificate': True
 }        
 
 def download_episode_en(season, episode):
