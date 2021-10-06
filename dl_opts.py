@@ -6,7 +6,7 @@ ydl_opts_en = {
     'continuedl': True,
     'writesubtitles': True,
     'subtitlesformat': 'vtt',
-    'outtmpl': '%(title)s_en.%(ext)s',
+    'outtmpl': '%(title)s_eng.%(ext)s',
     'quiet': True,
     'postprocessors': [
         {
@@ -22,7 +22,8 @@ ydl_opts_de = {
     'ignoreerrors': True,
     'hls_prefer_native': False,
     'continuedl': True,
-    'outtmpl': '%(title)s_de.%(ext)s',
+    'writesubtitles': False,
+    'outtmpl': '%(title)s_deu.%(ext)s',
     'quiet': True,
     'postprocessors': [
         {
