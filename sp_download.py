@@ -122,6 +122,9 @@ def download_episode_lang(season, episode, lang: str):
 
 def download_episode(season, episode):
     print(f"[Start] S{season}E{episode}")
+    if os.path.isfile(f"South_Park_S{int(season):02d}E{int(episode):02d}.mp4"):
+        print("Episode already exists, skip download")
+        return
     if multi_language:
         deu_thread = threading.Thread(target=download_episode_internal, args=(season, episode, LANG_DE))
         deu_thread.start()
