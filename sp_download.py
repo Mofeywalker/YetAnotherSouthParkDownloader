@@ -171,7 +171,7 @@ def merge_episode(season, episode):
         subprocess.call(ffmpeg_concat_video_command, shell=True)
 
         print(f"[add german audio track to video] S{season}E{episode}")
-        ffmpeg_add_audio_command = f"{ffmpeg_binary} -i {episode_name}_temp.mp4 -i {episode_name}_temp.m4a -c copy -map 0:v:0  -map 1:a:0 -map 0:a:0 -map 0:s:0 -metadata:s:a:0 language=ger -metadata:s:a:1 language=eng {episode_name}.mp4"
+        ffmpeg_add_audio_command = f"{ffmpeg_binary} -i {episode_name}_temp.mp4 -i {episode_name}_temp.m4a -c copy -map 0:v:0  -map 1:a:0 -map 0:a:0 -map 0:s:0? -metadata:s:a:0 language=ger -metadata:s:a:1 language=eng {episode_name}.mp4"
         subprocess.call(ffmpeg_add_audio_command, shell=True)
 
     else:
