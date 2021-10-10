@@ -204,7 +204,7 @@ def clean_up():
 def download_season(season):
     episodes = get_episodes()
     filtered = filter_season(episodes, season)
-    for episode in range(1, len(filtered)):
+    for episode in range(1, len(filtered) + 1):
         download_episode(season, episode)
 
 
