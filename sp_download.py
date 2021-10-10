@@ -201,11 +201,19 @@ def clean_up():
         os.remove(f)
 
 
+def get_season_episode_number(episode):
+    title = episode['meta']['header']['title'].split(SEPARATOR)
+    episode_number = int(title[1][1:])
+    return episode_number
+
+
 def download_season(season):
     episodes = get_episodes()
     filtered = filter_season(episodes, season)
-    for episode in range(1, len(filtered) + 1):
-        download_episode(season, episode)
+    # traverse list in reverse order as it starts with the most recent episode
+    for episode in reversed(filtered):
+        episode_number = get_season_episode_number(episode)
+        download_episode(season, episode_number)
 
 
 if __name__ == '__main__':
